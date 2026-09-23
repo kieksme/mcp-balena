@@ -1,15 +1,28 @@
 {
   "name": "@kieksme/mcp-balena",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "MCP server for the balenaCloud API",
   "type": "module",
-  "bin": { "mcp-balena": "dist/index.js" },
-  "files": ["dist", "README.md", "LICENSE"],
-  "engines": { "node": ">=22.14.0" },
-  "repository": { "type": "git", "url": "git+https://github.com/kieksme/mcp-balena.git" },
+  "bin": {
+    "mcp-balena": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kieksme/mcp-balena.git"
+  },
   "homepage": "https://github.com/kieksme/mcp-balena#readme",
   "license": "MIT",
-  "publishConfig": { "access": "public" },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
