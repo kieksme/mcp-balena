@@ -4,7 +4,7 @@
   "include-v-in-tag": false,
   "packages": {
     ".": {
-      "package-name": "@kieksme/mcp-balena",
+      "package-name": "@kieksme/balena-mcp",
       "extra-files": [
         { "type": "json", "path": "mcpb/manifest.json", "jsonpath": "$.version" },
         { "type": "json", "path": ".claude-plugin/plugin.json", "jsonpath": "$.version" },

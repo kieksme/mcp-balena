@@ -1,10 +1,10 @@
 {
-  "name": "@kieksme/mcp-balena",
+  "name": "@kieksme/balena-mcp",
   "version": "0.2.0",
   "description": "MCP server for the balenaCloud API",
   "type": "module",
   "bin": {
-    "mcp-balena": "dist/index.js"
+    "balena-mcp": "dist/index.js"
   },
   "files": [
     "dist",
@@ -19,7 +19,7 @@
     "url": "git+https://github.com/kieksme/mcp-balena.git"
   },
   "homepage": "https://github.com/kieksme/mcp-balena#readme",
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "publishConfig": {
     "access": "public"
   },

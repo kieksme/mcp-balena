@@ -88,7 +88,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAG: ${{ needs.release-please.outputs.tag_name }}
-        run: gh release upload "$TAG" artifacts/mcp-balena.mcpb --clobber
+        run: gh release upload "$TAG" artifacts/balena-mcp.mcpb --clobber
 
   publish-image:
     needs: release-please
@@ -109,5 +109,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/kieksme/mcp-balena:${{ needs.release-please.outputs.tag_name }}
-            ghcr.io/kieksme/mcp-balena:latest
+            ghcr.io/kieksme/balena-mcp:${{ needs.release-please.outputs.tag_name }}
+            ghcr.io/kieksme/balena-mcp:latest

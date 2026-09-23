@@ -1,14 +1,14 @@
 # Balena MCP
 
 [![CI](https://github.com/kieksme/mcp-balena/actions/workflows/ci.yml/badge.svg)](https://github.com/kieksme/mcp-balena/actions/workflows/ci.yml)
-[![npm](https://img.shields.io/npm/v/%40kieksme%2Fmcp-balena)](https://www.npmjs.com/package/@kieksme/mcp-balena)
+[![npm](https://img.shields.io/npm/v/%40kieksme%2Fbalena-mcp)](https://www.npmjs.com/package/@kieksme/balena-mcp)
 
 Manage [Balena](https://www.balena.io/) fleets, devices, releases, variables, tags, teams, and organizations from Claude, VS Code, and other MCP clients. The server runs locally over stdio or remotely over token-protected Streamable HTTP.
 
 ## Add to your MCP client
 
-[![Get for Claude Desktop](https://img.shields.io/badge/Claude_Desktop-Get_extension-D97757?logo=anthropic&logoColor=white)](https://github.com/kieksme/mcp-balena/releases/latest/download/mcp-balena.mcpb)
-[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_server-007ACC?logo=visualstudiocode&logoColor=white)](vscode:mcp/install?%7B%22name%22%3A%22balena%22%2C%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40kieksme%2Fmcp-balena%22%5D%2C%22env%22%3A%7B%22BALENA_API_TOKEN%22%3A%22%24%7Benv%3ABALENA_API_TOKEN%7D%22%7D%7D)
+[![Get for Claude Desktop](https://img.shields.io/badge/Claude_Desktop-Get_extension-D97757?logo=anthropic&logoColor=white)](https://github.com/kieksme/mcp-balena/releases/latest/download/balena-mcp.mcpb)
+[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_server-007ACC?logo=visualstudiocode&logoColor=white)](vscode:mcp/install?%7B%22name%22%3A%22balena%22%2C%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40kieksme%2Fbalena-mcp%22%5D%2C%22env%22%3A%7B%22BALENA_API_TOKEN%22%3A%22%24%7Benv%3ABALENA_API_TOKEN%7D%22%7D%7D)
 
 First, create a **named API key** in [Balena account preferences](https://dashboard.balena-cloud.com/preferences?tab=details). It has the permissions of your Balena user account. Keep it private.
 
@@ -28,7 +28,7 @@ To run the package directly with any stdio MCP client:
   "mcpServers": {
     "balena": {
       "command": "npx",
-      "args": ["-y", "@kieksme/mcp-balena"],
+      "args": ["-y", "@kieksme/balena-mcp"],
       "env": { "BALENA_API_TOKEN": "YOUR_BALENA_API_TOKEN" }
     }
   }
@@ -59,11 +59,15 @@ Set two separate secrets: `BALENA_API_TOKEN` for Balena and `MCP_HTTP_AUTH_TOKEN
 docker run --rm -p 127.0.0.1:3000:3000 \
   -e BALENA_API_TOKEN=YOUR_BALENA_API_TOKEN \
   -e MCP_HTTP_AUTH_TOKEN=YOUR_LONG_RANDOM_MCP_TOKEN \
-  ghcr.io/kieksme/mcp-balena:latest
+  ghcr.io/kieksme/balena-mcp:latest
 ```
 
 The MCP endpoint is `http://127.0.0.1:3000/mcp`; `GET /health` provides an unauthenticated health check. Send `Authorization: Bearer <MCP_HTTP_AUTH_TOKEN>` on MCP requests. The server refuses HTTP mode without that token.
 
 For a public deployment, put HTTPS in front of the container and set `MCP_HTTP_ALLOWED_HOSTS` to the external hostname, for example `balena-mcp.example.com,localhost,127.0.0.1`. No hosted service is included with the package.
 
-The package is available from [npm](https://www.npmjs.com/package/@kieksme/mcp-balena) and [GitHub Packages](https://github.com/orgs/kieksme/packages?repo_name=mcp-balena). Development and release instructions are in [CONTRIBUTING.md](CONTRIBUTING.md).
+The package is published as [`@kieksme/balena-mcp` on npm](https://www.npmjs.com/package/@kieksme/balena-mcp) and [GitHub Packages](https://github.com/orgs/kieksme/packages/npm/balena-mcp). The repository remains [`kieksme/mcp-balena`](https://github.com/kieksme/mcp-balena). Development and release instructions are in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+GPL-3.0-or-later. See [LICENSE](LICENSE).

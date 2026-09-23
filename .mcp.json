@@ -2,7 +2,7 @@
   "mcpServers": {
     "balena": {
       "command": "npx",
-      "args": ["-y", "@kieksme/mcp-balena"],
+      "args": ["-y", "@kieksme/balena-mcp"],
       "env": { "BALENA_API_TOKEN": "${user_config.token}" }
     }
   }
