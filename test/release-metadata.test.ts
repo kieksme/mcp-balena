@@ -21,7 +21,7 @@ describe('release identity', () => {
     expect(mcpb.license).toBe(pkg.license);
     expect(claude.license).toBe(pkg.license);
     expect(read('../LICENSE')).toContain('GNU GENERAL PUBLIC LICENSE');
-    expect(release.packages).toMatchObject({ '.': { 'package-name': pkg.name } });
+    expect(release.packages).toMatchObject({ '.': { component: 'mcp-balena', 'package-name': pkg.name } });
   });
 
   it('publishes the service-first image and MCPB asset', () => {
