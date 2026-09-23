@@ -1,0 +1,8 @@
+{
+  "name": "mcp-balena",
+  "owner": { "name": "kieks.me GbR", "url": "https://github.com/kieksme" },
+  "description": "Balena fleet and device management MCP server",
+  "plugins": [
+    { "name": "balena-mcp", "source": "./", "description": "Manage Balena fleets, devices, releases, variables, tags, teams, and organizations." }
+  ]
+}

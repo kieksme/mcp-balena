@@ -1,0 +1,15 @@
+name: Feature request
+description: Suggest a Balena workflow or MCP tool
+labels: [enhancement]
+body:
+  - type: textarea
+    id: workflow
+    attributes:
+      label: What would you like to do?
+      description: Describe the user workflow and link to the Balena API documentation where possible.
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current workaround

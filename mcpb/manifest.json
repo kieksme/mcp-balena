@@ -1,0 +1,31 @@
+{
+  "manifest_version": "0.3",
+  "name": "balena-mcp",
+  "version": "0.1.0",
+  "description": "Manage Balena fleets, devices, releases, variables, tags, teams, and organizations.",
+  "author": { "name": "kieks.me GbR", "url": "https://kieks.me" },
+  "homepage": "https://github.com/kieksme/mcp-balena",
+  "repository": { "type": "git", "url": "https://github.com/kieksme/mcp-balena" },
+  "license": "MIT",
+  "keywords": ["balena", "mcp", "iot", "fleets", "devices"],
+  "privacy_policies": ["https://www.balena.io/privacy-policy"],
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/server/index.js"],
+      "env": { "BALENA_API_TOKEN": "${user_config.balena_api_token}", "MCP_TRANSPORT": "stdio" }
+    }
+  },
+  "tools_generated": true,
+  "user_config": {
+    "balena_api_token": {
+      "type": "string",
+      "title": "Balena API token",
+      "description": "Create a named API key in Balena account preferences.",
+      "sensitive": true,
+      "required": true
+    }
+  }
+}

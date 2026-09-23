@@ -1,0 +1,15 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "release-type": "node",
+  "include-v-in-tag": false,
+  "packages": {
+    ".": {
+      "package-name": "@kieksme/mcp-balena",
+      "extra-files": [
+        { "type": "json", "path": "mcpb/manifest.json", "jsonpath": "$.version" },
+        { "type": "json", "path": ".claude-plugin/plugin.json", "jsonpath": "$.version" },
+        { "type": "generic", "path": "src/server.ts" }
+      ]
+    }
+  }
+}

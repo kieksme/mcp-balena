@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "balena": {
+      "command": "npx",
+      "args": ["-y", "@kieksme/mcp-balena"],
+      "env": { "BALENA_API_TOKEN": "${user_config.token}" }
+    }
+  }
+}

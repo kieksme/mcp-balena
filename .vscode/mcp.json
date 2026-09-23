@@ -1,0 +1,13 @@
+{
+  "inputs": [
+    { "id": "balena-api-token", "type": "promptString", "description": "Balena API token", "password": true }
+  ],
+  "servers": {
+    "balena": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@kieksme/mcp-balena"],
+      "env": { "BALENA_API_TOKEN": "${input:balena-api-token}" }
+    }
+  }
+}

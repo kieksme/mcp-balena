@@ -1,0 +1,9 @@
+node_modules/
+.pnpm-store/
+dist/
+coverage/
+*.tgz
+*.mcpb
+artifacts/
+.env
+.DS_Store

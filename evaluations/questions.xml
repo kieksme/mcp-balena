@@ -1,0 +1,12 @@
+<evaluation>
+  <qa_pair><question>In the fixed fixture, which organization owns the fleet whose slug ends in /kiosks? Answer with the organization name.</question><answer>Northstar Labs</answer></qa_pair>
+  <qa_pair><question>In the fixed fixture, which fleet contains the offline device named kiosk-02? Answer with the fleet name.</question><answer>Kiosks</answer></qa_pair>
+  <qa_pair><question>In the fixed fixture, what raw version is the target release of the fleet named Kiosks?</question><answer>2.4.0</answer></qa_pair>
+  <qa_pair><question>In the fixed fixture, which device in the Kiosks fleet is still running release 2.3.9? Answer with its device name.</question><answer>kiosk-02</answer></qa_pair>
+  <qa_pair><question>In the fixed fixture, which device has the site tag warehouse? Answer with its device name.</question><answer>sensor-01</answer></qa_pair>
+  <qa_pair><question>In the fixed fixture, which Northstar Labs fleet sets BALENA_HOST_CONFIG_gpu_mem to 64? Answer with the fleet name.</question><answer>Sensors</answer></qa_pair>
+  <qa_pair><question>In the fixed fixture, how many devices in Harbor Systems fleets are offline? Answer with a number.</question><answer>1</answer></qa_pair>
+  <qa_pair><question>In the fixed fixture, which team belongs to the organization that owns gateway-east? Answer with the team name.</question><answer>Field Support</answer></qa_pair>
+  <qa_pair><question>In the fixed fixture, what username belongs to the member of Northstar Labs' Operations team?</question><answer>mira</answer></qa_pair>
+  <qa_pair><question>In the fixed fixture, which fleet has a target release whose note says Sensor calibration? Answer with the fleet name.</question><answer>Sensors</answer></qa_pair>
+</evaluation>

@@ -1,0 +1,20 @@
+{
+  "name": "balena-mcp",
+  "displayName": "Balena MCP",
+  "description": "Manage Balena fleets, devices, releases, variables, tags, teams, and organizations.",
+  "version": "0.1.0",
+  "author": { "name": "kieks.me GbR", "url": "https://github.com/kieksme" },
+  "homepage": "https://github.com/kieksme/mcp-balena#readme",
+  "repository": "https://github.com/kieksme/mcp-balena",
+  "license": "MIT",
+  "keywords": ["mcp", "balena", "iot", "fleets", "devices"],
+  "userConfig": {
+    "token": {
+      "type": "string",
+      "title": "Balena API token",
+      "description": "Create a named API key in Balena account preferences.",
+      "sensitive": true,
+      "required": true
+    }
+  }
+}

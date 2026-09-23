@@ -1,0 +1,44 @@
+{
+  "organization": [
+    { "id": 1, "name": "Northstar Labs", "handle": "northstar" },
+    { "id": 2, "name": "Harbor Systems", "handle": "harbor" }
+  ],
+  "application": [
+    { "id": 11, "app_name": "Kiosks", "slug": "northstar/kiosks", "organization": 1, "should_be_running__release": 501 },
+    { "id": 12, "app_name": "Sensors", "slug": "northstar/sensors", "organization": 1, "should_be_running__release": 503 },
+    { "id": 21, "app_name": "Gateways", "slug": "harbor/gateways", "organization": 2, "should_be_running__release": 504 }
+  ],
+  "device": [
+    { "id": 101, "device_name": "kiosk-01", "belongs_to__application": 11, "is_online": true, "is_running__release": 501 },
+    { "id": 102, "device_name": "kiosk-02", "belongs_to__application": 11, "is_online": false, "is_running__release": 502 },
+    { "id": 103, "device_name": "sensor-01", "belongs_to__application": 12, "is_online": true, "is_running__release": 503 },
+    { "id": 201, "device_name": "gateway-east", "belongs_to__application": 21, "is_online": false, "is_running__release": 504 },
+    { "id": 202, "device_name": "gateway-west", "belongs_to__application": 21, "is_online": true, "is_running__release": 504 }
+  ],
+  "release": [
+    { "id": 501, "belongs_to__application": 11, "raw_version": "2.4.0", "note": "Stable kiosk release" },
+    { "id": 502, "belongs_to__application": 11, "raw_version": "2.3.9", "note": "Previous kiosk release" },
+    { "id": 503, "belongs_to__application": 12, "raw_version": "1.7.2", "note": "Sensor calibration" },
+    { "id": 504, "belongs_to__application": 21, "raw_version": "3.0.1", "note": "Gateway update" }
+  ],
+  "device_tag": [
+    { "id": 301, "device": 103, "tag_key": "site", "value": "warehouse" },
+    { "id": 302, "device": 201, "tag_key": "site", "value": "east" }
+  ],
+  "application_config_variable": [
+    { "id": 401, "application": 11, "name": "BALENA_HOST_CONFIG_gpu_mem", "value": "128" },
+    { "id": 402, "application": 12, "name": "BALENA_HOST_CONFIG_gpu_mem", "value": "64" }
+  ],
+  "team": [
+    { "id": 31, "name": "Operations", "belongs_to__organization": 1 },
+    { "id": 32, "name": "Field Support", "belongs_to__organization": 2 }
+  ],
+  "team_membership": [
+    { "id": 601, "user": 71, "is_member_of__team": 31 },
+    { "id": 602, "user": 72, "is_member_of__team": 32 }
+  ],
+  "user": [
+    { "id": 71, "username": "mira" },
+    { "id": 72, "username": "jonas" }
+  ]
+}
