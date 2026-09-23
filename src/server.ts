@@ -6,7 +6,7 @@ const id = z.number().int().positive();
 const page = { top: z.number().int().min(1).max(100).default(25), skip: z.number().int().min(0).default(0) };
 const confirmed = z.literal(true).describe('Must be true after reviewing the target and consequences');
 const nonempty = z.string().trim().min(1).max(255);
-const version = '0.2.0'; // x-release-please-version
+const version = '0.3.0'; // x-release-please-version
 
 function success(data: unknown) {
   const output = { data: data ?? null };
