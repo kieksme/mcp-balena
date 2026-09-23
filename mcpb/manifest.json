@@ -1,7 +1,7 @@
 {
   "manifest_version": "0.3",
   "name": "balena-mcp",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Manage Balena fleets, devices, releases, variables, tags, teams, and organizations.",
   "author": {
     "name": "kieks.me GbR",
