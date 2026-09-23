@@ -8,11 +8,12 @@ const pkg = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8'));
 const manifest = JSON.parse(readFileSync(join(root, 'mcpb/manifest.json'), 'utf8'));
 if (manifest.version !== pkg.version) throw new Error('MCPB and package versions differ');
 const stage = mkdtempSync(join(tmpdir(), 'balena-mcpb-'));
-const output = join(root, 'artifacts', 'mcp-balena.mcpb');
+const output = join(root, 'artifacts', 'balena-mcp.mcpb');
 try {
   mkdirSync(join(stage, 'server'), { recursive: true });
   mkdirSync(join(root, 'artifacts'), { recursive: true });
   cpSync(join(root, 'dist'), join(stage, 'server'), { recursive: true });
+  cpSync(join(root, 'LICENSE'), join(stage, 'LICENSE'));
   writeFileSync(join(stage, 'manifest.json'), JSON.stringify(manifest, null, 2));
   const dependencies = Object.fromEntries(Object.keys(pkg.dependencies).map(name => [name, JSON.parse(readFileSync(join(root, 'node_modules', name, 'package.json'), 'utf8')).version]));
   writeFileSync(join(stage, 'package.json'), JSON.stringify({ name: pkg.name, version: pkg.version, type: 'module', packageManager: pkg.packageManager, dependencies }, null, 2));

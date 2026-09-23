@@ -9,7 +9,7 @@
   },
   "homepage": "https://github.com/kieksme/mcp-balena#readme",
   "repository": "https://github.com/kieksme/mcp-balena",
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "keywords": [
     "mcp",
     "balena",

@@ -21,11 +21,11 @@ Use fixed responses in tests; never commit real Balena tokens, MCP bearer tokens
 
 ## Packaging
 
-`pnpm bundle:mcpb` creates `artifacts/mcp-balena.mcpb` from the built server and production dependencies. The manifest lives in `mcpb/manifest.json` and requests the Balena API key as a sensitive user input. `pnpm pack --pack-destination artifacts` checks the npm tarball. The Dockerfile runs the HTTP transport and requires both tokens at runtime.
+`pnpm bundle:mcpb` creates `artifacts/balena-mcp.mcpb` from the built server and production dependencies. The manifest lives in `mcpb/manifest.json` and requests the Balena API key as a sensitive user input. `pnpm pack --pack-destination artifacts` checks the npm tarball. The Dockerfile runs the HTTP transport and requires both tokens at runtime.
 
 ## Release and deployment
 
-CI runs on PRs and `main`. Release Please opens a release PR when Conventional Commits land on `main`. Merge that PR after CI passes: `.github/workflows/release.yml` then publishes the same tagged version to npm (`@kieksme/mcp-balena` under the `kieksme` npm organization), GitHub Packages, GHCR, and the `.mcpb` GitHub Release asset.
+CI runs on PRs and `main`. Release Please opens a release PR when Conventional Commits land on `main`. Merge that PR after CI passes: `.github/workflows/release.yml` then publishes the same tagged version to npm (`@kieksme/balena-mcp` under the `kieksme` npm organization), GitHub Packages, GHCR (`ghcr.io/kieksme/balena-mcp`), and the `.mcpb` GitHub Release asset. The repository remains `kieksme/mcp-balena`.
 
 The npm publish job uses the existing organization-level `NPM_TOKEN` secret. It must belong to a user with publish rights in the `kieksme` npm organization, such as `vergissberlin`; package access is public. GitHub Packages and GHCR use the repository's `GITHUB_TOKEN`. Check the npm package owner and both registries after the first release. Release Please also updates the MCPB manifest and Claude plugin versions.
 

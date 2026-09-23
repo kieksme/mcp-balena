@@ -23,11 +23,12 @@ jobs:
       - run: pnpm test
       - run: pnpm bundle:mcpb
       - run: pnpm smoke:mcpb
-      - run: pnpm exec mcpb info artifacts/mcp-balena.mcpb
+      - run: pnpm exec mcpb info artifacts/balena-mcp.mcpb
       - run: pnpm pack --pack-destination artifacts
       - name: Check container startup and auth
         run: |
           docker build -t balena-mcp-ci .
+          docker run --rm --entrypoint test balena-mcp-ci -f /app/LICENSE
           docker run -d --name balena-mcp-ci -p 127.0.0.1:3010:3000 \
             -e BALENA_API_TOKEN=test-token -e MCP_HTTP_AUTH_TOKEN=test-mcp-token \
             balena-mcp-ci

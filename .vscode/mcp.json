@@ -6,7 +6,7 @@
     "balena": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@kieksme/mcp-balena"],
+      "args": ["-y", "@kieksme/balena-mcp"],
       "env": { "BALENA_API_TOKEN": "${input:balena-api-token}" }
     }
   }
