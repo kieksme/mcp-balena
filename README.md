@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kieksme/skills/main/skills/platform/mcp-builder/templates/assets/kieks-me-banner-dark.svg">
+    <img alt="kieks.me" src="https://raw.githubusercontent.com/kieksme/skills/main/skills/platform/mcp-builder/templates/assets/kieks-me-banner-light.svg" width="280">
+  </picture>
+</p>
+
 # Balena MCP
 
 [![CI](https://github.com/kieksme/mcp-balena/actions/workflows/ci.yml/badge.svg)](https://github.com/kieksme/mcp-balena/actions/workflows/ci.yml)
