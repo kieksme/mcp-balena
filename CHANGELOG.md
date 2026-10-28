@@ -3,9 +3,10 @@
 ## [0.3.1](https://github.com/kieksme/mcp-balena/compare/mcp-balena-0.3.0...mcp-balena-0.3.1) (2026-10-28)
 
 
-### Miscellaneous Chores
+### Documentation
 
-* release 0.3.1 ([3a1f666](https://github.com/kieksme/mcp-balena/commit/3a1f666037902fc092f0e887797e0b8569282969))
+* Add a related-projects link to the community-maintained Balena Terraform Provider.
+* Add the kieks.me banner to the README.
 
 ## [0.3.0](https://github.com/kieksme/mcp-balena/compare/mcp-balena-0.2.0...mcp-balena-0.3.0) (2026-09-23)
 
