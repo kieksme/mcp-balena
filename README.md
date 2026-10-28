@@ -75,6 +75,10 @@ For a public deployment, put HTTPS in front of the container and set `MCP_HTTP_A
 
 The package is published as [`@kieksme/balena-mcp` on npm](https://www.npmjs.com/package/@kieksme/balena-mcp) and [GitHub Packages](https://github.com/orgs/kieksme/packages/npm/balena-mcp). The repository remains [`kieksme/mcp-balena`](https://github.com/kieksme/mcp-balena). Development and release instructions are in [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## Related projects
+
+Manage your Balena Cloud infrastructure as code with the community-maintained [Balena Terraform Provider](https://github.com/alchemaxinc/terraform-provider-balena) by alchemaxinc. It complements Balena MCP with declarative resource management through Terraform.
+
 ## License
 
 GPL-3.0-or-later. See [LICENSE](LICENSE).
