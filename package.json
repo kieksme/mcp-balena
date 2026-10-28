@@ -1,6 +1,6 @@
 {
   "name": "@kieksme/balena-mcp",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "MCP server for the balenaCloud API",
   "type": "module",
   "bin": {
